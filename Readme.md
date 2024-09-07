@@ -1,4 +1,35 @@
-# Explanation:-
+# How to setup ChromaDB:-
+
+1) First clone this repository
+<pre>https://github.com/chroma-core/chroma</pre>
+
+2) Then go into chroma folder
+<pre>cd chroma</pre>
+
+3) Then run this command 
+<pre>docker-compose up -d --build</pre>
+
+4) Then start a chroma server using following command:- 
+<pre>docker run -p 8000:8000 chromadb/chroma</pre>
+ The 4th command will create a chroma client running on port 8000
+ This is what you should see 
+ <pre>
+DEBUG:    [07-09-2024 07:33:09] Starting component System
+DEBUG:    [07-09-2024 07:33:09] Starting component OpenTelemetryClient
+DEBUG:    [07-09-2024 07:33:09] Starting component SqliteDB
+DEBUG:    [07-09-2024 07:33:09] Starting component QuotaEnforcer
+DEBUG:    [07-09-2024 07:33:09] Starting component Posthog
+DEBUG:    [07-09-2024 07:33:09] Starting component LocalSegmentManager
+DEBUG:    [07-09-2024 07:33:09] Starting component SegmentAPI
+INFO:     [07-09-2024 07:33:09] Started server process [1]
+INFO:     [07-09-2024 07:33:09] Waiting for application startup.
+INFO:     [07-09-2024 07:33:09] Application startup complete.
+INFO:     [07-09-2024 07:33:09] Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+</pre>
+
+5) Now you can access the chroma client at http://localhost:8000
+
+# Explanation of Output:-
 
 * This is what I got as output:-
 <pre>
